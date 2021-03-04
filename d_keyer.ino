@@ -97,11 +97,23 @@ void adj_keyer()
   lcd.setCursor(0,2);
   lcd.print("                    ");
   lcd.setCursor(0,2);
-  sprintf(LCDstr, "%2d", wpm);    //create string to print
-  lcd.print(LCDstr);            //display wpm on line 3
+  if (straight_key == false ) {
+    sprintf(LCDstr, "%2d", wpm);    //create string to print
+    lcd.print(LCDstr);            //display wpm on line 3
+  }
+  else {
+    lcd.print("Straight Key");
+  }
+  
   while (digitalRead(ENCODER_BTN)) {    //loop until encoder is pressed again
     if(enc_up == 1) {
-      wpm +=1;
+      if (straight_key == true) { 
+        wpm = 5;
+        straight_key=false;
+      }
+      else {
+        wpm +=1;
+      }
       if (wpm > 35) wpm = 35;
       lcd.setCursor(0,2);
       lcd.print("                    ");
@@ -112,12 +124,20 @@ void adj_keyer()
     }
     if(enc_dn == 1) {
       wpm -=1;
-      if (wpm < 5) wpm = 5;
+      if (wpm < 5) {
+        wpm = 4;
+        straight_key=true;
+      }
       lcd.setCursor(0,2);
       lcd.print("                    ");
       lcd.setCursor(0,2);
-      sprintf(LCDstr, "%2d", wpm);    //create string to print
-      lcd.print(LCDstr);            //display wpm on line 3
+      if (straight_key == false ) {
+        sprintf(LCDstr, "%2d", wpm);    //create string to print
+        lcd.print(LCDstr);            //display wpm on line 3
+      }
+      else {
+        lcd.print("Straight Key");
+      }
       enc_dn = 0;
     }
   }
@@ -128,4 +148,20 @@ void adj_keyer()
   disp_rit(); 
   loadWPM(wpm);                 // set keyer speed
   EEPROM.update(EE_KEYER_SPEED, wpm); //save new speed in EEPROM
+}
+
+void check_sk(void)
+{
+  if (digitalRead(DIT_KEY) == LOW || digitalRead(DAH_KEY) == LOW) {
+    if (sk_on == false) {
+      xmit_on();
+      sk_on = true;
+    }
+  }
+  else {
+    if (sk_on == true) {
+      xmit_off();
+      sk_on = false;
+    }
+  }
 }

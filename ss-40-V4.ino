@@ -14,7 +14,7 @@
 * Long press of encoder button enters keyer speed menu
 * Short press of Enter key enters RIT mode
 * Long press of Enter key enters tune mode (turns on transmitter for 5 seconds or until you press the enter key again)              
-* 
+* Turn keyer speed below 5wpm for straight key mode. Either dit or dah line transmits
 */
 
 #include <si5351mcu.h>          //Use Pavel low phase noise library
@@ -79,6 +79,8 @@ unsigned char       keyerControl;
 unsigned char       keyerState;
 enum KSTYPE {IDLE, CHK_DIT, CHK_DAH, KEYED_PREP, KEYED, INTER_ELEMENT };
 byte wpm;
+bool straight_key=false;
+bool sk_on=false;   //tracking straight key transmit status
 unsigned long mt_timer;
 
 bool backlight_state=HIGH;
@@ -124,7 +126,13 @@ void loop(){
   
   check_encoder();  //check for encoder rotation
 
-  check_keyer();    //check for keyer operation
+  if (straight_key == false) {
+    check_keyer();    //check for keyer operation
+  }
+  else {
+    check_sk();
+  }
+  
     
   fsm_eb(); //call fsm for encoder button functions
     if (state_eb == SHORT) {   //encoder button pressed, toggle backlight

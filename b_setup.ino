@@ -27,10 +27,11 @@ void setup(void) {
   }
 
   wpm = eeprom_read_dword((const uint32_t *)EE_KEYER_SPEED); //read saved keyer speed
-    if (wpm < 5 | wpm > 35) {
+    if (wpm < 0 | wpm > 35) {
       wpm = 10;                                                //set wpm to 10 if unreasonable
       eeprom_write_dword((uint32_t *)EE_KEYER_SPEED, wpm);
     }
+    if (wpm == 4) { straight_key = true;}
     
     pinMode(ENCODER_BTN, INPUT_PULLUP);
     pinMode(UP_BTN, INPUT_PULLUP);
