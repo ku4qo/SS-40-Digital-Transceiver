@@ -14,5 +14,5 @@ Firmware for the SS-40+ transceiver project
 * Short press of encoder button toggles LCD backlight
 * Long press of encoder button enters keyer speed menu
 * Short press of Enter key enters RIT mode
-* Long press of Enter key enters tune mode (turns on transmitter for 5 seconds or until you press the enter key again)              
+* Long press of Enter key enters tune mode (turns on transmitter for 10 seconds or until you press the enter key again)              
 * 
