@@ -89,6 +89,7 @@ void xmit_off(void)
 {
         digitalWrite(XMIT_PWR, LOW);        //turn off power to final amplifier
         delay(5);                           //wait to turn off xmit to allow cw envelope to decay and avoid keyclicks
+        digitalWrite(XMIT_EN, LOW);          //enable CLK2 drive to finals
         Si.disable(2);                      //turn off xmit frequency
         digitalWrite(TX_PIN, LOW);          //turn off Tx PIN diode switch
         delay(2);                           //wait for transients to die out

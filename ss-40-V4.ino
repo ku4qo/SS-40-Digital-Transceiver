@@ -13,7 +13,7 @@
 * Short press of encoder button toggles LCD backlight
 * Long press of encoder button enters keyer speed menu
 * Short press of Enter key enters RIT mode
-* Long press of Enter key enters tune mode (turns on transmitter for 5 seconds or until you press the enter key again)              
+* Long press of Enter key enters tune mode (turns on transmitter for 10 seconds or until you press the enter key again)              
 * Turn keyer speed below 5wpm for straight key mode. Either dit or dah line transmits
 */
 
@@ -109,7 +109,7 @@ unsigned long t_su = 0;
 unsigned long t_sd = 0;
 unsigned long bounce_delay = 10;
 unsigned long hold_delay = 500;
-unsigned long tune_timeout = 5000;
+unsigned long tune_timeout = 10000;
 enum FSM {RST, WAIT, ARM, DEBOUNCE, LIFT, SHORT, LONG, RELEASE, CANCEL, FIN, FIN_WAIT};
 FSM state_eb;  //new variable of enumeration type FSM for encoder button
 FSM state_su;  //new variable of enumeration type FSM for switch "up"
