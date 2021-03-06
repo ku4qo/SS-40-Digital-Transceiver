@@ -4,13 +4,13 @@ void calib(void)              //System calibration function, Si5351 clock and BF
   long cal_orig = cal_ofst;   //save existing cal value
   lcd.clear();
   lcd.setCursor(0,0);         //set cursor to column 0, row 1
-  lcd.print("Adjust CLK0 to");
+  lcd.print("ADJUST CLK0 TO");
   lcd.setCursor(0,1);         //set cursor to row 2
   lcd.print("10.000 MHz");  
   lcd.setCursor(0,2);         //set cursor to row 2
-  lcd.print("Change with Encoder");  
+  lcd.print("CHANGE WITH ENCODER");  
   lcd.setCursor(0,3);         //set cursor to row 3
-  lcd.print("Press ENTER TO CONT.");
+  lcd.print("PRESS ENTER TO CONT.");
   wait_key();                   //wait for "Enter" key press, then continue
   lcd.clear();
   disp_freq(cal_fq);
@@ -54,13 +54,13 @@ void calib(void)              //System calibration function, Si5351 clock and BF
 //Si5351 calibration complete; Begin IF Passband calibration
  
   lcd.setCursor(0,0);         //set cursor to column 0, row 0
-  lcd.print("Adjust IF Frequency");
+  lcd.print("ADJUST IF FREQUENCY");
   lcd.setCursor(0,1);         //set cursor to row 1
-  lcd.print("to Match IF Filter");  
+  lcd.print("TO MATCH IF FILTER");  
   lcd.setCursor(0,2);         //set cursor to row 2
   lcd.print("CENTER @ 700Hz");
   lcd.setCursor(0,3);         //set cursor to row 3
-  lcd.print("Press ENTER TO CONT.");
+  lcd.print("PRESS ENTER TO CONT.");
   wait_key();                 //wait for ENTER_BTN key press then continue
   lcd.clear();                // clear screen and display if freq and step pointer
   disp_freq(if_freq);
@@ -99,7 +99,7 @@ void wait_key(void)
 
 void check_step_change(long fq2)
 {
-    if ( !digitalRead(DOWN_BTN) )
+    if ( !digitalRead(UP_BTN) )
     {
       step_index+=1;
       if (step_index > 5 ) 
@@ -107,11 +107,11 @@ void check_step_change(long fq2)
        step_index = 0;
       }
       disp_step(fq2);
-      while ( !digitalRead(DOWN_BTN)) {} //debounce
+      while ( !digitalRead(UP_BTN)) {} //debounce
       delay(100);
     }
 
-    if ( !digitalRead(UP_BTN) )
+    if ( !digitalRead(DOWN_BTN) )
     {
      step_index -=1;
      if (step_index < 0 ) 
@@ -119,7 +119,7 @@ void check_step_change(long fq2)
      step_index = 5;
     }
     disp_step(fq2);
-      while ( !digitalRead(UP_BTN)) {} //debounce
+      while ( !digitalRead(DOWN_BTN)) {} //debounce
       delay(100);
     }
 }

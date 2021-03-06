@@ -23,6 +23,8 @@ void disp_freq(long freq)
   long rm = freq % 1000000;
   long fq_k=rm / 1000;
   long fq_h = rm % 1000;
+  lcd.setCursor(0, 0);    //Clear line
+  lcd.print("                    ");
   sprintf(LCDstr, "%.1ld,%.3ld.%.3ld KHz", fq_m, fq_k, fq_h );  //create string with proper formatting
   lcd.setCursor(0, 0);        // set the cursor to column 5, line 0
   lcd.print(LCDstr);
@@ -89,7 +91,7 @@ void xmit_off(void)
 {
         digitalWrite(XMIT_PWR, LOW);        //turn off power to final amplifier
         delay(5);                           //wait to turn off xmit to allow cw envelope to decay and avoid keyclicks
-        digitalWrite(XMIT_EN, LOW);          //enable CLK2 drive to finals
+        digitalWrite(XMIT_EN, LOW);          //disable CLK2 drive to finals
         Si.disable(2);                      //turn off xmit frequency
         digitalWrite(TX_PIN, LOW);          //turn off Tx PIN diode switch
         delay(2);                           //wait for transients to die out

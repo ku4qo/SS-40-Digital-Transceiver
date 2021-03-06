@@ -91,9 +91,9 @@ void adj_keyer()
 {
   lcd.clear();
   lcd.setCursor(0,0);         //set cursor to column 0, row 1
-  lcd.print("Adj. Keyer spd");
+  lcd.print("ADJUST KEYER SPEED");
   lcd.setCursor(0,1);
-  lcd.print("with encoder");
+  lcd.print("WITH ENCODER");
   lcd.setCursor(0,2);
   lcd.print("                    ");
   lcd.setCursor(0,2);
@@ -102,7 +102,7 @@ void adj_keyer()
     lcd.print(LCDstr);            //display wpm on line 3
   }
   else {
-    lcd.print("Straight Key");
+    lcd.print("STRAIGHT KEY");
   }
   
   while (digitalRead(ENCODER_BTN)) {    //loop until encoder is pressed again
@@ -136,7 +136,7 @@ void adj_keyer()
         lcd.print(LCDstr);            //display wpm on line 3
       }
       else {
-        lcd.print("Straight Key");
+        lcd.print("STRAIGHT KEY");
       }
       enc_dn = 0;
     }
