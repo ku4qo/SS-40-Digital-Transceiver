@@ -1,12 +1,7 @@
 void set_frequency(short dir)
 {
   fq=fq+(dir * step_array[step_index]);   //change freq by step size
-  if ( usb == true ) {          // calculate vfo
-      vfo = if_freq + fq;
-    }
-    else {
-      vfo = if_freq - fq;
-    }
+  calc_vfo();
   if ( rit_state == HIGH ) { vfo += rit_freq; }
   Si.setFreq(0, vfo);
   Si.enable(0);
@@ -73,7 +68,7 @@ void disp_sideband(void)
   }
 }
 
-void xmit_on(void)
+void xmit_on(void)  //suggestion, only run setFreq if fq has changed. 
 {
       digitalWrite(RX_MUTE, LOW);           //mute receiver audio
       delay(5);                             //wait for audio to quit
@@ -108,5 +103,15 @@ void measure_volts(void)
     sprintf(LCDstr, "%02d.%02dV", (int)vbatt, (int)(vbatt*100)%100);    //create string to print
     lcd.print(LCDstr);            //display battery voltage on line 4 in right corner
     v_time = millis();            //save time of last display
+  }
+}
+
+void calc_vfo(void)
+{
+  if ( usb == true ) {          // calculate vfo
+    vfo = if_freq + fq;
+  }
+  else {
+    vfo = if_freq - fq;
   }
 }

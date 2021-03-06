@@ -42,12 +42,7 @@ void calib(void)              //System calibration function, Si5351 clock and BF
 
  eeprom_write_dword((uint32_t *)EE_SAVED_CAL, cal_ofst); //save new cal in eeprom
  Si.correction(cal_ofst);       //set new calibration
- if ( usb == true ) {          // calculate vfo
-      vfo = if_freq + fq;
-    }
-    else {
-      vfo = if_freq - fq;
-    }
+ calc_vfo();                    //calculate vfo from fq and if_freq
  Si.setFreq(0, vfo);            //call lib to set vfo frequency 
  Si.enable(0);                  //turn on vfo 
 
@@ -66,23 +61,36 @@ void calib(void)              //System calibration function, Si5351 clock and BF
   disp_freq(if_freq);
   disp_step(if_freq);
 
+  Si.setFreq(2, fq);
+  Si.enable(2);                 //turn on transmit clock
+  digitalWrite(XMIT_EN, HIGH);
+  
   while ( digitalRead(ENTER_BTN) ) {
 
     if(enc_up == 1) {
       if_freq += step_array[step_index];
       disp_freq(if_freq);
       enc_up=0;
+      calc_vfo();                    //calculate vfo from fq and if_freq
+      Si.setFreq(0, vfo);            //call lib to set vfo frequency 
     }
     else if (enc_dn == 1) {
       if_freq += (-1 * step_array[step_index]);
       disp_freq(if_freq);
       enc_dn=0;
+      calc_vfo();                    //calculate vfo from fq and if_freq
+      Si.setFreq(0, vfo);            //call lib to set vfo frequency 
     }
     check_step_change(if_freq);
   }
   
+  // IF calibration complete, disable xmit clock
+  digitalWrite(XMIT_EN, LOW);          //disable CLK2 drive to finals
+  Si.disable(2);                      //turn off xmit frequency
+  
   eeprom_write_dword((uint32_t *)EE_SAVED_IF, if_freq); //save new if frequency cal in eeprom
 
+  lcd.clear();
   disp_freq(fq);                  //display the initial startup frequency, 7,030.000 KHz
   disp_step(fq);                  //display inital step indicator
   disp_rit();

@@ -55,12 +55,7 @@ void setup(void) {
     Si.correction(cal_ofst);        // correct si5351 crystal frequency - calculate for each new si5351 board
  
 // Enable the desired outputs with some frequencies
-    if ( usb == true ) {          // calculate vfo
-      vfo = if_freq + fq;
-    }
-    else {
-      vfo = if_freq - fq;
-    }
+    calc_vfo();                       //calculate vfo freq
     Si.setFreq(0, vfo);                 // CLK0 is VFO
     
 // set drive levels
