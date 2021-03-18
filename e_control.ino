@@ -75,7 +75,11 @@ void xmit_on(void)  //suggestion, only run setFreq if fq has changed.
       digitalWrite(RX_PIN, LOW);            //turn off Rx PIN diode switch
       delay(2);                             //wait for transients to die out   
       digitalWrite(TX_PIN, HIGH);           //turn on Tx PIN diode switch
-      delay(2);                             //wait for transients to die out             
+      delay(2);                             //wait for transients to die out
+      if ( rit_state == HIGH ) {            //vfo for correct sidetone during transmit
+        calc_vfo();
+        Si.setFreq(0, vfo);             
+      }
       Si.setFreq(2, fq);                    //set transmit frequency
       Si.enable(2);                         //turn on xmit frequency
       digitalWrite(XMIT_EN, HIGH);          //enable CLK2 drive to finals
@@ -90,6 +94,9 @@ void xmit_off(void)
         Si.disable(2);                      //turn off xmit frequency
         digitalWrite(TX_PIN, LOW);          //turn off Tx PIN diode switch
         delay(2);                           //wait for transients to die out
+        if ( rit_state == HIGH ) {          //recover correct vfo for RIT post transmit
+          set_frequency(0);
+        }
         digitalWrite(RX_PIN, HIGH);         //turn on Rx PIN diode switch
         delay(2);                           //wait for transients to die out             
         digitalWrite(RX_MUTE, HIGH);        //unmute receiver audio 
