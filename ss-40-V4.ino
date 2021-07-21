@@ -22,16 +22,16 @@
 #include <EEPROM.h>
 #include <LiquidCrystal_I2C.h>
 
-#define ENCODER_BTN   4       //Encoder pushbutton
-#define DOWN_BTN      5       //Down button
-#define UP_BTN        6       //Up button
-#define ENTER_BTN     7       //Enter button
-#define RX_MUTE       8       //Rx mute line, low to mute
-#define XMIT_PWR      13      //Tx power to finals, high to enable
-#define TX_PIN        10      //Tx PIN switch control, high to enable
-#define RX_PIN        11      //Rx PIN switch control, high to enable
-#define DIT_KEY       12      //Dit key contact
-#define DAH_KEY       9       //Dah key contact
+#define ENCODER_BTN   4        //Encoder pushbutton
+#define DOWN_BTN      5        //Down button
+#define UP_BTN        7        //Up button
+#define ENTER_BTN     6        //Enter button
+#define RX_MUTE       8        //Rx mute line, low to mute
+#define DIT_KEY       9        //Dit key contact
+#define DAH_KEY      10        //Dah key contact
+#define RX_PIN       11        //Rx PIN switch control, high to enable
+#define TX_PIN       12        //Tx PIN switch control, high to enable
+#define XMIT_PWR     13        //Tx power to finals, high to enable
 
 #define A0            A0      //spare
 #define A1            A1      //spare
@@ -88,8 +88,8 @@ bool backlight_state=HIGH;
 static long ktimer;             // timer variable for keyer
 
 //setup for interrupt-driven encoder reading
-static int pinA = 2; // Our first hardware interrupt pin is digital pin 2
-static int pinB = 3; // Our second hardware interrupt pin is digital pin 3
+static int pinA = 3; // Our first hardware interrupt pin is digital pin 2
+static int pinB = 2; // Our second hardware interrupt pin is digital pin 3
 volatile byte aFlag = 0; // let's us know when we're expecting a rising edge on pinA to signal that the encoder has arrived at a detent
 volatile byte bFlag = 0; // let's us know when we're expecting a rising edge on pinB to signal that the encoder has arrived at a detent (opposite direction to when aFlag is set)
 volatile byte encoderPos = 0; //this variable stores our current value of encoder position. Change to int or uin16_t instead of byte if you want to record a larger range than 0-255

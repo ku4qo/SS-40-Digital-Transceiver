@@ -21,7 +21,7 @@ void setup(void) {
   }
   
   if_freq = eeprom_read_dword((const uint32_t *)EE_SAVED_IF);  //read saved IF frequency from eeprom
-    if (if_freq < 11000000 | if_freq > 11000500) {
+    if (if_freq < 10999500 | if_freq > 11000500) {
     if_freq = if_guess;
     eeprom_write_dword((uint32_t *)EE_SAVED_IF, if_freq);
   }
