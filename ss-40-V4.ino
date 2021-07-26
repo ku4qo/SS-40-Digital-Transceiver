@@ -1,4 +1,4 @@
-/* Firmware for SS-40+ transceiver
+/* Firmware for SS-40+ transceiver - 07212021 Version
 * by Jim Kortge K8IQY and Mike Maiorana KU4QO
 * Press and hold enter on power up to start calibration
 * si5351 clock 0 is vfo frequency and clock 2 is transmit frequency;  
@@ -24,8 +24,8 @@
 
 #define ENCODER_BTN   4        //Encoder pushbutton
 #define DOWN_BTN      5        //Down button
-#define UP_BTN        7        //Up button
 #define ENTER_BTN     6        //Enter button
+#define UP_BTN        7        //Up button
 #define RX_MUTE       8        //Rx mute line, low to mute
 #define DIT_KEY       9        //Dit key contact
 #define DAH_KEY      10        //Dah key contact
