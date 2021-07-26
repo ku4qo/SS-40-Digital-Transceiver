@@ -1,0 +1,65 @@
+#  	RefDes                                                       			Quantity 	Value            	Name                           
+______________________________________________________________________________________________________________________________________
+
+1  	C1, C2, C4, C16, C17, C23, C24, C25, C26, C27, C31, C39, C40 	13       	0.1 uF           	MLCC                           
+2  	C3                                                           			1        	27 pF            	NP0 Ceramic Capacitor          
+3  	C5, C6                                                       			2        	0 pF             	MLCC                           
+4  	C7, C8, C10                                                  		3        	560 pF           	NP0 Ceramic Capacitor          
+5  	C9                                                           			1        	0 pF             	NP0 Ceramic Capacitor          
+6  	C11, C18, C22, C42, C43                                      		5        	0.01 uF          	MLCC                           
+7  	C12, C21                                                     			2        	4.7 pF           	NP0 Ceramic Capacitor          
+8  	C13                                                          			1        	270 pF           	NP0 Ceramic Capacitor          
+9  	C14, C15                                                     			2        	120 pF           	NP0 Ceramic Capacitor          
+10 	C19                                                          			1        	1000 pF          	NP0 Ceramic Capacitor          
+11 	C20                                                          			1        	47 pF            	NP0 Ceramic Capacitor          
+12 	C28, C32                                                     			2        	100 pF           	NP0 Ceramic Capacitor          
+13 	C29                                                          			1        	10 pF            	NP0 Ceramic Capacitor          
+14 	C30, C37, C38                                                		3        	100 uF           	25 Volt Electrolytic Capacitor 
+15 	C33                                                          			1        	10 uF            	CPOL-USE2.5-6 (CPOL-US)        
+16 	C34, C44                                                     			2        	0.1 uF           	5% Polystyrene Capacitor       
+17 	C35                                                          			1        	0.022 uF         	5% Polystyrene Capacitor       
+18 	C36                                                          			1        	220 uF           	25 Volt Electrolytic Capacitor 
+19 	C41                                                          			1        	0.1 uF Poly      	C-US050-025X075 (C-US)         
+20 	C45, C46                                                     			2        	10 uF            	25 Volt Electrolytic Capacitor 
+21 	D1, D3                                                       			2        	1N5711           	Schottky Diode                 
+22 	D2                                                           			1        	LED           	3 mm Green                     
+23 	D4                                                           			1        	1N4735            	6.2 Volt Zener Diode             
+24 	J1                                                           			1        	LO Input         	2-Pin male Header              
+25 	J2                                                           			1        	Ant. Input       	2-Pin Male Header              
+26 	J3                                                           			1        	Tx Power         	2-Pin Male Header              
+27 	J4                                                           			1        	Power In         	2-Pin Male Header              
+28 	J5                                                           			1        	Audio Output     	2-Pin Male Header              
+29 	J6                                                           			1        	Keyline          	2-Pin Male Header              
+30 	J7                                                           			1        	Controller Power 	2-Pin Male Header              
+31 	J8                                                           			1        	Attenuator Power 	2-Pin Male Header              
+32 	L1                                                           			1        	3.1 uH           	T37-2 Toroid                   
+33 	L2                                                           			1        	10 uH            	Molded Inductor                
+34 	L3, L7                                                       			2        	1 mH             	Molded Inductor                
+35 	L4                                                           			1        	3.3 uH           	T37-2 Toroid                   
+36 	L5                                                           			1        	3.9 uH           	Molded Inductor                
+37 	L6                                                           			1        	4.7 uH           	Molded Inductor                
+38 	MX1                                                          			1        	ADE-1            	Double Balanced Diode Mixer    
+39 	Q1, Q4, Q6                                                   			3        	J310/2N5457      	JFET                           
+40 	Q2, Q3, Q7                                                   			3        	PN2222A          	NPN Transistor                 
+41 	Q5                                                           			1        	FQPF11P06        	P-MOSFET                       
+42 	R1, R2, R8, R14, R17                                         		5        	18               	1/4 Watt Resistor              
+43 	R3, R4                                                       			2        	27               	1/4 Watt Resistor              
+44 	R5, R6                                                       			2        	49.9             	1/4 Watt Resistor              
+45 	R7                                                           			1        	180              	1/4 Watt Resistor              
+46 	R9, R10, R15, R16                                            		4        	1.2 K            	1/4 Watt Resistor              
+47 	R11, R12                                                     			2        	62               	1/4 Watt Resistor              
+48 	R13, R20                                                     			2        	330              	1/4 Watt Resistor              
+49 	R18, R27                                                     			2        	47 K             	1/4 Watt Resistor              
+50 	R19, R26                                                     			2        	10               	1/4 Watt Resistor              
+51 	R21, R23                                                     			2        	22 K             	1/4 Watt Resistor              
+52 	R22                                                          			1        	1 M              	1/4 Watt Resistor              
+53 	R24, R25                                                     			2        	2.7 K            	1/4 Watt Resistor              
+54 	R28                                                          			1        	1 K              	1/4 Watt Resistor              
+55 	TC1, TC2, TC3, TC4                                    	       		4        	10-70 pF         	6 mm Trimcap                   
+56 	TR1                                                          			1        	10 K             	3318 Trim Potentiometer        
+57 	U1                                                           			1        	LT1253           	Video Amplifier                
+58 	U2                                                           			1        	SA612            	Active Mixer                   
+59 	U3                                                           			1        	78L08            	8 Volt Regulator               
+60 	U4                                                           			1        	LM386-4          	Audio Amplifier                
+61 	VR1                                                          			1        	1 K              	PCB Audio Taper Potentiometer  
+62 	X1, X2, X3, X4, X5, X6, X7                                       		7        	11 MHz           	ECS-110-S-1 11MHz Series      
