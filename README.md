@@ -45,3 +45,5 @@ The firmware, as well as the schematics and gerber files for the boards are cont
 * Long press of encoder button enters keyer speed menu
 * Short press of Enter key enters RIT mode
 * Long press of Enter key enters tune mode (turns on transmitter for 10 seconds or until you press the enter key again)              
+
+# The information contained here is provided without support or warranty, as stated in the license details.
