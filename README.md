@@ -1,5 +1,5 @@
 # SS-40 Digital Transceiver
-The SS-40-plus project is a high-performance transceiver built for 40 meters.
+The SS-40 Digital Transceiver project is a high-performance transceiver built for 40 meters.
 This is a "quarantine" project designed by Jim Kortge K8IQY with Mike Maiorana KU4QO.
 The basis of the receiver is Jim's excellent SS-40 receiver. 
 The transceiver is built with separate functional modules. 
