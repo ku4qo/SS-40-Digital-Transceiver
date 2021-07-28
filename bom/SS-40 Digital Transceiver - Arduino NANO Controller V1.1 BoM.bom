@@ -2,11 +2,11 @@
 __________________________________________________________________________________________________________
 
 1  	C1                             		1        	100uF             	25 Volt; Electrolytic Capacitor 
-2  	C2, C3, C4, C5, C6, C7, C8, C9 	8        	0.1uF             	MLCC                            
+2  	C2, C3, C4, C5, C6, C7, C8, C9 	  8        	0.1uF             	MLCC                            
 3  	D1                             		1        	1N5817G           	Schottky Diode                  
 4  	J1                             		1        	Power             	2-Pin Male Header               
 5  	J2                             		1        	Encoder           	4-Pin Male Header               
-6  	J3                             		1 	Switches          	4-Pin Male Header               
+6  	J3                             		1 	      Switches          	4-Pin Male Header               
 7  	J4                             		1        	Rx_Mute           	2-Pin Male Header               
 8  	J5                             		1        	Paddle            	3-Pin Male Header               
 9  	J6                             		1        	Rx_PIN            	2-Pin Male Header               
@@ -18,8 +18,8 @@ ________________________________________________________________________________
 15 	J12                            		1        	Tx_Freq           	2-Pin Male Header               
 16 	J13                            		1        	BFO               	2-Pin Male Header               
 17 	J14                            		1        	VFO               	2-Pin Male Header               
-18 	NANO                           	1        	Arduino_Nano_V3.X 	Arduino Nano Module             
-19 	R1, R2, R3, R5                 	4        	Not Used          	1/4 Watt Resistor               
-20 	R4, R6                         	2        	68                	1/4 Watt Resistor               
-21 	U1                             		1        	Si5351 Module     	Si5351 Module                   
+18 	NANO                           	  1        	Arduino_Nano_V3.X 	Arduino Nano Module             
+19 	R1, R2, R3, R5                 	  4        	Not Used          	1/4 Watt Resistor               
+20 	R4, R6                         	  2        	68                	1/4 Watt Resistor               
+21 	U1                             		1        	Si5351 Module     	Si5351 Module (Adafruit or compatible)                   
 22 	U2                             		1        	74ACT00N          	MC74ACT00N                      
