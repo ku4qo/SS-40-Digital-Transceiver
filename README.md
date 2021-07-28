@@ -1,4 +1,4 @@
-# SS-40-plus
+# SS-40 Digital Transceiver
 The SS-40-plus project is a high-performance transceiver built for 40 meters.
 This is a "quarantine" project designed by Jim Kortge K8IQY with Mike Maiorana KU4QO.
 The basis of the receiver is Jim's excellent SS-40 receiver. 
@@ -29,7 +29,7 @@ This project is being released to encourage experimentation. It is released unde
 
 The firmware, as well as the schematics and gerber files for the boards are contained in this repository.
 
-# Firmware for the SS-40+ transceiver project
+# Firmware for the SS-40 Digital transceiver project
 * by Jim Kortge K8IQY and Mike Maiorana KU4QO
 * Press and hold enter on power up to start calibration
 * si5351 clock 0 is vfo frequency and clock 2 is transmit frequency;  
