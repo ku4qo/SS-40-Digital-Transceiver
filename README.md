@@ -13,7 +13,7 @@ There is a very effective AGC that controls both the input RF amp and the IF sig
 
 The transmitter is a class-E design similar to that in the QRP Labs QCX. It provides 4 to 5 watts out with a 12v supply that is easily within FCC purity requirements. It also uses a PIN diode T/R switch that is sequenced by the CPU, which greatly reduces big-signal intermodulation artifacts of simple diode-switched transceivers.
 
-The Digital control board provides agile VFO and transmit signals, as well as an iambic keyer, sideband switching, and T/R control.
+The Arduino NANO based Digital Control board provides agile VFO and transmit signals, as well as an iambic keyer, sideband switching, RIT and T/R control.
 
 The modules can be built as needed to create different configurations.
 
