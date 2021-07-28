@@ -1,4 +1,4 @@
-/* Firmware for SS-40+ transceiver - 07212021 Version
+/* Firmware for SS-40 Digital transceiver - 07282021 Version
 * by Jim Kortge K8IQY and Mike Maiorana KU4QO
 * Press and hold enter on power up to start calibration
 * si5351 clock 0 is vfo frequency and clock 2 is transmit frequency;  
@@ -16,6 +16,8 @@
 * Long press of Enter key enters tune mode (turns on transmitter for 10 seconds or until you press the enter key again)              
 * Turn keyer speed below 5wpm for straight key mode. Either dit or dah line transmits
 */
+
+#define CODE_VER    "Ver. 07282021"
 
 #include <si5351mcu.h>          //Use Pavel low phase noise library
 #include <Wire.h>

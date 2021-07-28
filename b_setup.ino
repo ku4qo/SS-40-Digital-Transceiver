@@ -67,6 +67,8 @@ void setup(void) {
     Si.disable(2);                 //turn off xmit
     lcd.setCursor(3,1);
     lcd.print("SS-40 DIGITAL");
+    lcd.setCursor(3,3);
+    lcd.print(CODE_VER);
     delay(2000);
     lcd.clear();
 
