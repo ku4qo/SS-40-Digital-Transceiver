@@ -18,8 +18,9 @@ ________________________________________________________________________________
 15 	J12                            		1        	Tx_Freq           	2-Pin Male Header               
 16 	J13                            		1        	BFO               	2-Pin Male Header               
 17 	J14                            		1        	VFO               	2-Pin Male Header               
-18 	NANO                           	  1        	Arduino_Nano_V3.X 	Arduino Nano Module             
-19 	R1, R2, R3, R5                 	  4        	Not Used          	1/4 Watt Resistor               
-20 	R4, R6                         	  2        	68                	1/4 Watt Resistor               
+18 	NANO                           	1        	Arduino_Nano_V3.X 	Arduino Nano Module             
+19 	R1, R2, R3, R5                 	4        	Not Used          	1/4 Watt Resistor               
+20 	R4, R6                         	2        	68                	1/4 Watt Resistor               
 21 	U1                             		1        	Si5351 Module     	Si5351 Module (Adafruit or compatible)                   
 22 	U2                             		1        	74ACT00N          	MC74ACT00N                      
+23  Disp                              1         4x20 I2C LCD display
