@@ -1,0 +1,36 @@
+#  	RefDes                                                		Quantity 	Value      		Name                  
+________________________________________________________________________________________________________________
+
+1  	C1, C2, C3, C15, C17, C19, C20, C21, C22, C23         	10       	0.1uF      		MLCC                  
+2  	C4, C8, C9, C10                                       		4        	1 uF       		MLCC                  
+3  	C5, C18, C24                                          		3        	0.01 uF    		MLCC                  
+4  	C6                                                    		1        	68 pF      		NP0 Ceramic Capacitor 
+5  	C7                                                    		1        	39 pF      		NP0 Ceramic Capacitor 
+6  	C11                                                   		1        	270 pF     		NP0 Ceramic Capacitor 
+7  	C12, C13                                              		2        	680 pF     		NP0 Ceramic Capacitor 
+8  	C14                                                   		1        	330 pF     		NP0 Ceramic Capacitor 
+9  	C16                                                   		1        	100 pF     		NP0 Ceramic Capacitor 
+10 	D1, D4, D5                                            		3        	1N4007     		Si Diode (Used as PIN Diode)            
+11 	D2, D3, D6, D7                                        		4        	1N4148     		Si Diode              
+12 	J1                                                    		1        	Tx_Power   	2-Pin Male Header     
+13 	J2                                                    		1        	Tx_Enable  	2-Pin Male Header     
+14 	J3                                                    		1        	Antenna    	2-Pin Male Header     
+15 	J4                                                    		1        	Tx_Freq    	2-Pin Male Header     
+16 	J5                                                    		1        	Tx_PIN     		2-Pin Male Header     
+17 	J6                                                    		1        	Rx_Antenna 	2-Pin Male Header     
+18 	J7                                                    		1        	Rx_PIN     		2-Pin Male Header     
+19 	L1, L6, L7, L8, L9 				5        	100uH      		Molded Inductor       
+20 	L2/T37-2/17T                                          		1        	1.2 uH     		T37-2 Toroid          
+21 	L3/T37-2/18T, L5/T37-2/18T                            	2        	1.4 uH     		T37-2 Toroid          
+22 	L4/T37-2/20T                                          		1        	1.7 uH     		T37-2 Toroid          
+23 	Q1, Q9                                                		2        	PN2907A    	PNP Transistor        
+24 	Q2                                                    		1        	MPS751     	PNP Transistor        
+25 	Q3, Q4, Q5, Q6, Q7, Q8, Q10, Q11, Q12                 	9        	BS170      		MOSFET                
+26 	R1                                                    		1        	100        		1/4 Watt Resistor     
+27 	R2, R7, R9, R12, R13, R17                             	6        	10 K       		1/4 Watt Resistor     
+28 	R3, R11, R14                                          		3        	560/1W     		1 Watt Resistor       
+29 	R4                                                    		1        	560        		1/4 Watt Resistor     
+30 	R5, R10, R16                                          		3        	470        		1/4 Watt Resistor     
+31 	R6                                                    		1        	2.2 K      		1/4 Watt Resistor     
+32 	R8                                                    		1        	10         		1/4 Watt Resistor     
+33 	R15                                                   		1        	1.5 K      		1/4 Watt Resistor     

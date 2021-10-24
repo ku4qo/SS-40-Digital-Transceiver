@@ -1,0 +1,45 @@
+SS-40 Digital Transceiver - Additional Parts BoM
+
+
+Additional parts to connect PCBs to each other, both electrically and mechanically, and recommendations for other parts that may be needed.
+
+
+
+Dupont Connectors, Female to Female, 10cm, 15cm, & 20cm lengths
+
+<https://www.amazon.com/EDGELEC-Breadboard-Optional-Assorted-Multicolored/dp/B07GD1XFWV/ref=sr_1_3?dchild=1&keywords=edgelec&qid=1627307536&sr=8-3>
+
+
+
+Standoff Assortment
+
+<https://www.amazon.com/Csdtylh-Male-Female-Standoff-Stainless-Assortment/dp/B06Y5TJXY1/ref=sr_1_4?dchild=1&keywords=PCB+standoff&qid=1627307978&sr=8-4>
+
+
+
+4X20 LCD Display (Yellow)
+
+<https://www.amazon.com/HiLetgo-Backlight-Display-Arduino-MEGA2560/dp/B01DKETWO2/ref=sr_1_9?dchild=1&keywords=4x20+lcd+display&qid=1627662921&sr=8-9>
+
+
+90 Degree L Mounting Brackets
+
+<https://www.mouser.com/ProductDetail/Keystone-Electronics/616?qs=TMDrOSIpnUcl1d%2FTSUe7rw%3D%3D>
+
+
+
+No Detent Optical Encoder
+
+<https://www.mouser.com/ProductDetail/bourns/pec12r-4025f-s0024/?qs=Zq5ylnUbLm7c1LzY1JyJgg%3D%3D&countrycode=US&currencycode=USD>
+
+
+
+Miniature SPST Toggle Switches (for Rx Attenutor Control)
+
+<https://www.taydaelectronics.com/mini-toggle-switch-spdt-on-on.html>
+
+
+
+Almost all of the parts for this project can be purchased from Tayda Eectronics, except for the NP0 (C0G) capacitors and the crystals.  Those are best acquired from Mouser Electronics, Newark Electronics, or DigiKey.  Newark Electronics carries Multicomp brand NP0 capacitors at attractive prices.  100 volt, +/-5% units are recommended and are avaible from this source.  Capacitor identified as MLCC are "Multi-layer Ceramic Capacitors", available from most suppliers, 100 volt preferred, with 5 mm lead spacing.
+
+
